@@ -11,10 +11,22 @@ const CategoryMealsScreen = (props) => {
           props.navigation.push('CategoryMeals');
         }}
       />
-      <Button 
+      <Button
         title="Go back to categories"
         onPress={() => {
           props.navigation.goBack();
+        }}
+      />
+      <Button
+        title="Go back to root screen"
+        onPress={() => {
+          props.navigation.popToTop();
+        }}
+      />
+      <Button
+        title="Go there and never comeback"
+        onPress={() => {
+          props.navigation.replace('MealDetail');
         }}
       />
     </View>
